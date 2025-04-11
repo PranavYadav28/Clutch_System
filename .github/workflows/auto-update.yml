@@ -1,1 +1,32 @@
+name: Auto Update Project Info
+
+on:
+  push:
+    paths:
+      - 'data/**'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Update Project Info
+        run: |
+          pip install --upgrade pip
+          python scripts/update_version.py
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/
+          git commit -m "Auto update project info" || echo "No changes"
+          git push
 

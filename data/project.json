@@ -1,0 +1,20 @@
+{
+  "name": "MyCoolProject",
+  "language": "Python",
+  "framework": "Flask",
+  "version": "v1.0.0",
+  "start_date": "2024-05-01",
+  "last_updated": "2025-04-11",
+  "milestones": [
+    {
+      "version": "v1.0",
+      "description": "Initial release",
+      "date": "2024-06-10"
+    },
+    {
+      "version": "v1.5",
+      "description": "Feature X added",
+      "date": "2024-12-20"
+    }
+  ]
+}

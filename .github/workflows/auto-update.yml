@@ -17,11 +17,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run version update script
+      - name: Update version and date
         run: |
           python scripts/update_version.py
 
-      - name: Inject version into README
+      - name: Inject into README
         run: |
           python scripts/inject_version_into_readme.py
 

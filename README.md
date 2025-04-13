@@ -1,6 +1,13 @@
-# Clutch System Project
-### 🚀 Version: ![](https://raw.githubusercontent.com/PranavYadav28/Clutch_System/main/data/project-info.json?raw=true)
+# 🧩 Clutch System
 
-**Current Version:** <!--VERSION-->
+A research project on clutch mechanisms in modern vehicles.
 
-_Last updated: <!--LAST_UPDATED-->
+---
+
+**🚀 Current Version:** <!--VERSION-->
+
+🕒 **Last Updated:** <!--LAST_UPDATED-->
+
+---
+
+More content here...

@@ -1,3 +1,34 @@
-- name: Inject version into README
-  run: |
-    python scripts/inject_version_into_readme.py
+name: Auto Update Project Info
+
+on:
+  push:
+    paths:
+      - 'data/**'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run version update script
+        run: |
+          python scripts/update_version.py
+
+      - name: Inject version into README
+        run: |
+          python scripts/inject_version_into_readme.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/ README.md
+          git commit -m "Auto-update version and README" || echo "No changes"
+          git push

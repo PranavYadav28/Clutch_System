@@ -1,18 +1,27 @@
 import json
+from datetime import datetime
 
-with open("data/project-info.json", "r") as f:
+# Paths
+info_path = "data/project-info.json"
+readme_path = "README.md"
+
+# Load project info
+with open(info_path, "r") as f:
     data = json.load(f)
 
 version = data.get("version", "v0.0.0")
-last_updated = data.get("last_updated", "N/A")
+last_updated = data.get("last_updated", str(datetime.today().date()))
 
-with open("README.md", "r") as f:
-    content = f.read()
+# Load README
+with open(readme_path, "r") as f:
+    readme = f.read()
 
-content = content.replace("<!--VERSION-->", version)
-content = content.replace("<!--LAST_UPDATED-->", last_updated)
+# Replace placeholders
+readme = readme.replace("<!--VERSION-->", version)
+readme = readme.replace("<!--LAST_UPDATED-->", last_updated)
 
-with open("README.md", "w") as f:
-    f.write(content)
+# Save updated README
+with open(readme_path, "w") as f:
+    f.write(readme)
 
-print("✅ Injected version into README.md")
+print("✅ Injected version and last updated into README.md")

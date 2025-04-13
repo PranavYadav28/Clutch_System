@@ -1,8 +1,6 @@
 # Clutch System Project
 ### 🚀 Version: ![](https://raw.githubusercontent.com/PranavYadav28/Clutch_System/main/data/project-info.json?raw=true)
 
-# 🚀 Project: `MyProject`
-
 - **Language:** `Python`
 - **Framework:** `Flask`
 - **Version:** `v1.0.0`

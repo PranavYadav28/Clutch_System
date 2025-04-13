@@ -2,7 +2,7 @@
   "name": "Clutch_System",
   "language": "Python",
   "framework": "Flask",
-  "version": "v1.0.2",
+  "version": "v1.0.3",
   "start_date": "2024-06-01",
   "last_updated": "2025-04-13",
   "milestones": [

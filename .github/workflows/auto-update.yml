@@ -3,7 +3,8 @@ name: Auto Update Project Info
 on:
   push:
     paths:
-      - '**'
+      - 'data/**'
+      - 'README.md'
 
 jobs:
   update:
@@ -17,18 +18,18 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Update version and date
+      - name: Run update_version script
         run: |
           python scripts/update_version.py
 
-      - name: Inject into README
+      - name: Inject version and date into README
         run: |
           python scripts/inject_version_into_readme.py
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add data/ README.md
-          git commit -m "Auto-update version and README" || echo "No changes"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md data/project-info.json
+          git commit -m "Update version and date in README" || echo "No changes to commit"
           git push

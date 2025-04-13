@@ -3,7 +3,7 @@ name: Auto Update Project Info
 on:
   push:
     paths:
-      - 'data/**'
+      - '**'
 
 jobs:
   update:

@@ -1,3 +1,3 @@
-**🚀 Current Version:** <!--VERSION-->
+**🚀 Current Version:** v1.0.5
 
-🕒 **Last Updated:** <!--LAST_UPDATED-->
+🕒 **Last Updated:** 2025-04-13

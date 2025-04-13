@@ -4,9 +4,9 @@ A research project on clutch mechanisms in modern vehicles.
 
 ---
 
-**🚀 Current Version:** <!--VERSION-->
+**🚀 Current Version:** v1.0.1
 
-🕒 **Last Updated:** <!--LAST_UPDATED-->
+🕒 **Last Updated:** 2025-04-13
 
 ---
 

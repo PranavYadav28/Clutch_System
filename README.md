@@ -1,12 +1,3 @@
-# 🧩 Clutch_System
+**🚀 Current Version:** <!--VERSION-->
 
-A research project on clutch mechanisms in modern vehicles
----
-
-**🚀 Current Version:** v1.0.1
-
-🕒 **Last Updated:** 2025-04-13
-
----
-
-
+🕒 **Last Updated:** <!--LAST_UPDATED-->
